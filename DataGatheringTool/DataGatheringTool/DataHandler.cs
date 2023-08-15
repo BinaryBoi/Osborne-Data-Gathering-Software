@@ -40,15 +40,31 @@ public class DataHandler
         return dh_Temprature.ToString(place) + "°C";
     }
 
-    public void SaveData(string dh_FileName, List<DataSet> dh_Data)
+    public void SaveData(string dh_FileName, List<DataSet> dh_Data, float dh_Seperator, string dh_Url)
     {
         StringBuilder csv = new StringBuilder();
+        csv.AppendLine(dh_Url);
+        csv.AppendLine("Under " + dh_Seperator + "°C");
         csv.AppendLine(string.Join(",", new string[] { "ID", "Name", "Age", "Temperature" }));
         string filename =dh_FileName + ".csv";
 
         foreach (DataSet dh in dh_Data)
         {
-            csv.AppendLine(string.Join(",", new string[] { dh.id, dh.name, dh.age.ToString(), RoundTemperature(dh.temperature, 1) }));
+            if (dh.temperature < dh_Seperator)
+            {
+                csv.AppendLine(string.Join(",", new string[] { dh.id, dh.name, dh.age.ToString(), RoundTemperature(dh.temperature, 1) }));
+            }
+        }
+
+        csv.AppendLine("Over " + dh_Seperator + "°C");
+        csv.AppendLine(string.Join(",", new string[] { "ID", "Name", "Age", "Temperature" }));
+
+        foreach (DataSet dh in dh_Data)
+        {
+            if (dh.temperature >= dh_Seperator)
+            {
+                csv.AppendLine(string.Join(",", new string[] { dh.id, dh.name, dh.age.ToString(), RoundTemperature(dh.temperature, 1) }));
+            }
         }
 
         string debugFolder = Environment.CurrentDirectory;

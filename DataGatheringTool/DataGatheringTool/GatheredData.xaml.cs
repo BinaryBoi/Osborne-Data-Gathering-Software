@@ -25,11 +25,13 @@ namespace DataGatheringTool
     public partial class GatheredData : Window
     {
         DataHandler dataHandler = new DataHandler();
+        float temp;
 
-        public GatheredData(string gd_URL, double gd_Temp, string gd_SortMethod, List<DataHandler.DataSet> gd_Dataset)
+        public GatheredData(string gd_URL, float gd_Temp, string gd_SortMethod, List<DataHandler.DataSet> gd_Dataset)
         {
             InitializeComponent();
             URL.Text = gd_URL;
+            temp = gd_Temp;
             UnderText.Text = "Under " + gd_Temp + "°C";
             OverText.Text = "Over " + gd_Temp + "°C";
             dataHandler.dh_DataSet = gd_Dataset;
@@ -61,7 +63,7 @@ namespace DataGatheringTool
 
         public void SaveData(object sender, RoutedEventArgs e)
         {
-            dataHandler.SaveData(FileName.Text, dataHandler.dh_DataSet);
+            dataHandler.SaveData(FileName.Text, dataHandler.dh_DataSet, temp, URL.Text);
             SaveSuccess saveSuccess = new SaveSuccess(FileName.Text + ".csv");
             saveSuccess.Show();
         }

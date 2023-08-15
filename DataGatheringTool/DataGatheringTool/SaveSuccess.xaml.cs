@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Text;
@@ -35,11 +36,13 @@ namespace DataGatheringTool
 
         public void Open(object sender, RoutedEventArgs e)
         {
-            //        <Button Click="Open" HorizontalAlignment="Left" VerticalAlignment="Bottom" Width="100" Height="30" FontSize="20">Open File</Button>
+            //<Button Click="Open" HorizontalAlignment="Left" VerticalAlignment="Bottom" Width="100" Height="30" FontSize="20">Open File</Button>
 
             string debugFolder = Environment.CurrentDirectory;
             string projectDirectory = Directory.GetParent(debugFolder).Parent.Parent.Parent.FullName;
             string fileDirectory = projectDirectory + "\\" + ss_FileName;
+            Trace.WriteLine(fileDirectory);
+            System.Diagnostics.Process.Start(fileDirectory);
         }
     }
 }

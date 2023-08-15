@@ -46,9 +46,9 @@ namespace DataGatheringTool
 
         public void GatherData(object sender, RoutedEventArgs e)
         {
-            double temp;
+            float temp;
             int dp;
-            if (URL.Text != "" && double.TryParse(Temp.Text, out temp))
+            if (URL.Text != "" && float.TryParse(Temp.Text, out temp))
             {
                 dataHandler.GatherData(URL.Text);
                 if (dataHandler.dh_DataSet != null)
