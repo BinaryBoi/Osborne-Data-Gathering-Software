@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Senior\\OneDrive\\DataExtraction\\DataGatheringTool\\DataGatheringTool\\DataGatheringTool\\DataGatheringTool.csproj": {}
+    "C:\\Users\\Senior\\Desktop\\OsborneDataGathering\\Osborne-Data-Gathering-Software\\DataGatheringTool\\DataGatheringTool\\DataGatheringTool.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Senior\\OneDrive\\DataExtraction\\DataGatheringTool\\DataGatheringTool\\DataGatheringTool\\DataGatheringTool.csproj": {
+    "C:\\Users\\Senior\\Desktop\\OsborneDataGathering\\Osborne-Data-Gathering-Software\\DataGatheringTool\\DataGatheringTool\\DataGatheringTool.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Senior\\OneDrive\\DataExtraction\\DataGatheringTool\\DataGatheringTool\\DataGatheringTool\\DataGatheringTool.csproj",
+        "projectUniqueName": "C:\\Users\\Senior\\Desktop\\OsborneDataGathering\\Osborne-Data-Gathering-Software\\DataGatheringTool\\DataGatheringTool\\DataGatheringTool.csproj",
         "projectName": "DataGatheringTool",
-        "projectPath": "C:\\Users\\Senior\\OneDrive\\DataExtraction\\DataGatheringTool\\DataGatheringTool\\DataGatheringTool\\DataGatheringTool.csproj",
+        "projectPath": "C:\\Users\\Senior\\Desktop\\OsborneDataGathering\\Osborne-Data-Gathering-Software\\DataGatheringTool\\DataGatheringTool\\DataGatheringTool.csproj",
         "packagesPath": "C:\\Users\\Senior\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Senior\\OneDrive\\DataExtraction\\DataGatheringTool\\DataGatheringTool\\DataGatheringTool\\obj\\",
+        "outputPath": "C:\\Users\\Senior\\Desktop\\OsborneDataGathering\\Osborne-Data-Gathering-Software\\DataGatheringTool\\DataGatheringTool\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",

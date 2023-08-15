@@ -13,6 +13,9 @@
     <Compile Update="GatheredData.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="SaveSuccess.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Page Update="Error.xaml">
@@ -22,6 +25,9 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="MainWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="SaveSuccess.xaml">
       <SubType>Designer</SubType>
     </Page>
   </ItemGroup>

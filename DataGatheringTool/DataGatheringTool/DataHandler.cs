@@ -44,13 +44,17 @@ public class DataHandler
     {
         StringBuilder csv = new StringBuilder();
         csv.AppendLine(string.Join(",", new string[] { "ID", "Name", "Age", "Temperature" }));
-        string filename = dh_FileName + ".csv";
+        string filename =dh_FileName + ".csv";
 
         foreach (DataSet dh in dh_Data)
         {
             csv.AppendLine(string.Join(",", new string[] { dh.id, dh.name, dh.age.ToString(), RoundTemperature(dh.temperature, 1) }));
         }
 
-        File.AppendAllText(filename, csv.ToString());
+        string debugFolder = Environment.CurrentDirectory;
+        string projectDirectory = Directory.GetParent(debugFolder).Parent.Parent.Parent.FullName;
+        string fileDirectory = projectDirectory + "\\" + filename;
+        File.AppendAllText(fileDirectory, csv.ToString());
+        //return System.IO.Path.GetDirectoryName(filename);
     }
 }

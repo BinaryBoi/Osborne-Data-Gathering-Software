@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "C44NVSO03VSlZZGGdiu1X5JbwQYxizEmycEF3wpSbGHc7BwDU8KhtBj0fqvsd4aZCbZP4KDCdTJeE4B9di1KJQ==",
+  "dgSpecHash": "m7dKlV1/PNrdWS5YrDuB33qC+2PuZVg5bibzxi+ddCCRXmRMkYpe/4MgY5w9el4P4k6HITZNE6AJINe5ochhYg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Senior\\OneDrive\\DataExtraction\\DataGatheringTool\\DataGatheringTool\\DataGatheringTool\\DataGatheringTool.csproj",
+  "projectFilePath": "C:\\Users\\Senior\\Desktop\\OsborneDataGathering\\Osborne-Data-Gathering-Software\\DataGatheringTool\\DataGatheringTool\\DataGatheringTool.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Senior\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512"
   ],

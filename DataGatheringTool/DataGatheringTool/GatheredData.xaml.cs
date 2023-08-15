@@ -62,6 +62,8 @@ namespace DataGatheringTool
         public void SaveData(object sender, RoutedEventArgs e)
         {
             dataHandler.SaveData(FileName.Text, dataHandler.dh_DataSet);
+            SaveSuccess saveSuccess = new SaveSuccess(FileName.Text + ".csv");
+            saveSuccess.Show();
         }
 
         private void OrganiseLists(double temp)

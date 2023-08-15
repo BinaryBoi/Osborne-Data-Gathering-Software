@@ -9,8 +9,8 @@
         Title="GatheredData" Height="290" Width="520">
     <Grid Margin="5">
         <TextBlock x:Name="URL" HorizontalAlignment="Center" VerticalAlignment="Top" Height="20" Width="280" Margin="0,0,0,0" TextAlignment="Center" Text="URL"/>
-
-        <TextBlock x:Name="UnderText" Width="245" HorizontalAlignment="Left" TextAlignment="Center" Margin="0,17.5,0,0">Under</TextBlock>
+        <Separator Margin="0,-205,0,0"/>
+        <TextBlock x:Name="UnderText" Width="245" HorizontalAlignment="Left" TextAlignment="Center" Margin="0,20,0,0">Under</TextBlock>
         <DataGrid x:Name="Under" ItemsSource="{Binding}" AutoGenerateColumns="False" Width="245" HorizontalAlignment="Left" Height="180" Margin="0,025,0,0">
             <DataGrid.Columns>
                 <DataGridTextColumn x:Name="UnderID" Width="40" Header="ID" Binding="{Binding id}"/>
@@ -20,7 +20,7 @@
             </DataGrid.Columns>
         </DataGrid>
 
-        <TextBlock x:Name="OverText" Width="245" HorizontalAlignment="Right" TextAlignment="Center" Margin="0,17.5,0,0">Over</TextBlock>
+        <TextBlock x:Name="OverText" Width="245" HorizontalAlignment="Right" TextAlignment="Center" Margin="0,20,0,0">Over</TextBlock>
         <DataGrid x:Name="Over" ItemsSource="{Binding}" AutoGenerateColumns="False" Width="245" HorizontalAlignment="Right" Height="180" Margin="0,25,0,0">
             <DataGrid.Columns>
                 <DataGridTextColumn x:Name="OverID" Width="40" Header="ID" Binding="{Binding id}"/>
