@@ -1,4 +1,5 @@
-﻿using Newtonsoft.Json;
+﻿using DataGatheringTool;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -21,12 +22,31 @@ public class DataHandler
     {
         if (dh_EndPoint != null)
         {
-            using WebClient client = new WebClient();
-            using Stream stream = client.OpenRead(dh_EndPoint);
-            using StreamReader reader = new StreamReader(stream);
-            string rawData = reader.ReadToEnd();
-            dh_DataSet = JsonConvert.DeserializeObject<List<DataSet>>(rawData);
-            System.Diagnostics.Debug.WriteLine(dh_DataSet[1].temperature);
+            try
+            {
+                using WebClient client = new WebClient();
+                using Stream stream = client.OpenRead(dh_EndPoint);
+                using StreamReader reader = new StreamReader(stream);
+                string rawData = reader.ReadToEnd();
+                try
+                {
+                    dh_DataSet = JsonConvert.DeserializeObject<List<DataSet>>(rawData);
+                    System.Diagnostics.Debug.WriteLine(dh_DataSet[1].temperature);
+                }
+                catch (Newtonsoft.Json.JsonReaderException ex)
+                {
+                    Error error = new Error("Data cannot be converted");
+                    error.Show();
+                }
+            }
+            catch (FileNotFoundException ex)
+            {
+                Error error = new Error("Invalid URL");
+                error.Show();
+            }
+            catch (WebException ex)
+            {
+            }
         } 
     }
 

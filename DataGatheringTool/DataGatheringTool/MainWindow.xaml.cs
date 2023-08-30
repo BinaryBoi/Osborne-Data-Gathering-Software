@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -56,7 +57,7 @@ namespace DataGatheringTool
                     if (dataHandler.dh_DataSet.Count != 0)
                     {
                         GatheredData gatheredData = new GatheredData(URL.Text, temp, sortMethod, dataHandler.dh_DataSet);
-                        gatheredData.Show();
+                        gatheredData.Show();         
                     }
                     else
                     {
